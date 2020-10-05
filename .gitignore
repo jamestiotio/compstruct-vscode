@@ -1,0 +1,15 @@
+out
+.DS_Store
+npm-debug.log
+node_modules
+*.vsix
+tmp/**
+.vs/
+nodeLanguageServer/**
+nodeLanguageServer.*/**
+languageServer/**
+languageServer.*/**
+.vscode-test
+**/.vscode-test/**
+**/.vscode test/**
+**/.vscode-smoke/**
