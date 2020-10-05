@@ -3,7 +3,7 @@ VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)
 
 # Description
 
-A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/VSCode) with rich support for the courseware used in the (labs of) Computation Structures module (both MIT 6.004 and SUTD 50.002): jsim, tmsim and bsim.
+A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/VSCode) with rich language support for the courseware used in the (labs of) Computation Structures module (both MIT 6.004 and SUTD 50.002): jsim, tmsim and bsim.
 
 # Features
 - [ ] Syntax Highlighting
