@@ -2,6 +2,7 @@ out
 .DS_Store
 npm-debug.log
 node_modules
+parsers
 *.vsix
 tmp/**
 .vs/
