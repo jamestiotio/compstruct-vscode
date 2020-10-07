@@ -24,7 +24,7 @@ These tools were originally developed by MIT:
 
 You can request for more features by submitting an issue!
 
-Feel free to also contribute via submitting a pull request!
+Feel free to also contribute via submitting a pull request! For contributors, please check the included tool documentations in the `docs` folder for your reference when further developing this extension!
 
 ## Requirements
 
