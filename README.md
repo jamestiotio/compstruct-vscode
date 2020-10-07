@@ -19,7 +19,7 @@ These tools were originally developed by MIT:
 - [ ] IntelliSense (Hover Information, Parameter Info & Content Assist)
 - [ ] Code Navigation (Folding & Definition Jumps)
 - [ ] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
-- [ ] Snippet Completion (Auto Code Completion)
+- [x] Snippet Completion (Auto Code Completion) (JSim only)
 - [ ] Language Configuration
 
 You can request for more features by submitting an issue!
