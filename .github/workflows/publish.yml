@@ -1,0 +1,24 @@
+name: Deploy and Publish Extension
+on:
+    push:
+      branches:
+        - master
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+              node-version: [12.x]
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@master
+              with:
+                node-version: ${{ matrix.node-version }}
+            - name: Install VSCE
+              run: npm install -g vsce
+            - name: Publish to Visual Studio Code Marketplace
+              run: npm publish -p $VSCE_TOKEN
+              env:
+                VSCE_TOKEN: ${{ secrets.VS_MARKETPLACE_PAT }}
