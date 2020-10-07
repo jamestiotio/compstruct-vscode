@@ -1,0 +1,217 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.jsim",
+	"name": "JSim",
+	"fileTypes": [
+		"jsim"
+	],
+	"patterns": [
+		{
+			"include": "#device-statements"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"comment": "Match control statements",
+			"include": "#ctrl-statements"
+		},
+		{
+			"comment": "Match strings",
+			"include": "#strings"
+		},
+		{
+			"comment": "Match comments",
+			"include": "#comments-inline"
+		}
+	],
+	"repository": {
+		"strings": {
+			"patterns": [
+				{
+					"comment": "Matches double-quoted strings",
+					"name": "string.quoted.double.jsim",
+					"begin": "\"",
+					"end": "\"",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.jsim"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.jsim"
+						}
+					}
+				},
+				{
+					"comment": "Matches single-quoted strings",
+					"name": "string.quoted.single.jsim",
+					"begin": "'",
+					"end": "'",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.jsim"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.jsim"
+						}
+					}
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"comment": "Empty comment block",
+					"name": "comment.block.empty.jsim",
+					"match": "/\\*\\*/",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.jsim"
+						}
+					}
+				},
+				{
+					"include": "#comments-inline"
+				}
+			]
+		},
+		"comments-inline": {
+			"patterns": [
+				{
+					"name": "comment.block.jsim",
+					"begin": "/\\*",
+					"end": "\\*/",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.jsim"
+						}
+					}
+				},
+				{
+					"comment": "1 matches any whitespace preceding //, 2 end matches //, end matches the newline",
+					"name": "comment.line.double-slash.jsim",
+					"begin": "(^[ \\t]+)?(//)",
+					"end": "\\n",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.whitespace.comment.leading.jsim"
+						},
+						"2": {
+							"name": "punctuation.definition.comment.jsim"
+						}
+					}
+				},
+				{
+					"comment": "Matches comments starting with *",
+					"name": "comment.line.asterisk",
+					"begin": "\\*.*",
+					"end": "\\n",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.jsim"
+						}
+					}
+				}
+			]
+		},
+		"ctrl-statements": {
+			"patterns": [
+				{
+					"comment": "Put this higher up in the array last so that it overrides generic control statements",
+					"include": "#include-statement"
+				},
+				{
+					"comment": "Put this higher up in the array last to override generic control statements",
+					"include": "#subckt-statement"
+				},
+				{
+					"name": "meta.function.jsim",
+					"match": "(\\.(checkoff|connect|tran|dc|end|global|model|MODEL|mverify|op|options|plot|plotdef|subckt|ends|temp|tempdir|verify|include))($|\\s+)(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.jsim"
+						},
+						"4": {
+							"patterns": [
+								{
+									"include": "#constants"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"include-statement": {
+			"patterns": [
+				{
+					"comment": "Matches .include statements",
+					"name": "entity.function.jsim",
+					"match": "(\\.include)\\s+(.*)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.import.include.jsim"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#strings"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"subckt-statement": {
+			"patterns": [
+				{
+					"comment": "Matches .subckt statements",
+					"name": "meta.function.jsim",
+					"match": "(\\.subckt)\\s+(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.jsim"
+						},
+						"2": {
+							"name": "variable.parameter.jsim"
+						}
+					}
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.jsim",
+					"match": "\\b[0-9]+\\.?[0-9]*"
+				}
+			]
+		},
+		"device-statements": {
+			"patterns": [
+				{
+					"comment": "Matches device statement and highlights parameters separately",
+					"name": "meta.device.jsim",
+					"match": "^((R|r|C|c|L|l|M|m|V|v|I|i|X|x|E|e|F|f|G|g|H|h|W|w).*?)(?=\\s)\\s*(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.type.device.jsim"
+						},
+						"3": {
+							"patterns": [
+								{
+									"include": "#constants"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	}
+}

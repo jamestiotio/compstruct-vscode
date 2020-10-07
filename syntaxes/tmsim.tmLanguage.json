@@ -1,0 +1,105 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.tmsim",
+	"name": "TMSim",
+	"fileTypes": [
+		"tmsim"
+	],
+	"patterns": [
+		{
+			"comment": "Match tmsim statements",
+			"include": "#tmsim-statements"
+		}
+	],
+	"repository": {
+		"tmsim-statements": {
+			"patterns": [
+				{
+					"comment": "Matches tmsim statements and highlights parameters separately",
+					"name": "meta.function.tmsim",
+					"match": "(symbols|states|action|tape|result|result1)(?=\\s)\\s*(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.tmsim"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#constants"
+								}
+							]
+						}
+					}
+				},
+				{
+					"include": "#checkoff-statement"
+				}
+			]
+		},
+		"checkoff-statement": {
+			"patterns": [
+				{
+					"comment": "Matches tmsim checkoff statement and highlights string parameter",
+					"name": "meta.function.tmsim",
+					"match": "(checkoff)(?=\\s)\\s*(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.tmsim"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#strings"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.jsim",
+					"match": "\\b[0-9]+\\.?[0-9]*"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"comment": "Matches double-quoted strings",
+					"name": "string.quoted.double.jsim",
+					"begin": "\"",
+					"end": "\"",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.jsim"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.jsim"
+						}
+					}
+				},
+				{
+					"comment": "Matches single-quoted strings",
+					"name": "string.quoted.single.jsim",
+					"begin": "'",
+					"end": "'",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.jsim"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.jsim"
+						}
+					}
+				}
+			]
+		}
+	}
+}
