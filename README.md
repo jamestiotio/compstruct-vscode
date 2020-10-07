@@ -32,7 +32,7 @@ This section will describe any requirements and dependencies for this extension,
 
 ## Extension Settings
 
-This section will list out the settings contributed by the extension.
+This section will list out the settings contributed by this extension.
 
 ## Known Issues
 
