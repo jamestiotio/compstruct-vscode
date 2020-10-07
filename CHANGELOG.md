@@ -4,7 +4,12 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.3]
+
+- Fix double starting U+002E characters for .subckt, .include and .connect snippets
+
 ## [0.0.2]
+
 - Initial support for snippets
 
 ## [0.0.1]

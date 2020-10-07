@@ -2,7 +2,7 @@
 	"subcircuit": {
 		"prefix": "subckt",
 		"body": [
-			".subckt ${1:name} ${2:inputs} ${3:outputs}",
+			"\.subckt ${1:name} ${2:inputs} ${3:outputs}",
 			"$4",
 			".ends"
 		],
@@ -25,7 +25,7 @@
 	"include": {
 		"prefix": "include",
 		"body": [
-			".include \"${1:location}\""
+			"\.include \"${1:location}\""
 		],
 		"description": "Code snippet for an include statement"
 	},
@@ -79,9 +79,9 @@
 		"description": "Code snippet for a waveform source"
 	},
 	"Connect": {
-		"prefix": "con",
+		"prefix": "connect",
 		"body": [
-			".connect ${1:node1} ${2:node2} ${3:nodes}"
+			"\.connect ${1:node1} ${2:node2} ${3:nodes}"
 		],
 		"description": "Code snippet for a connection"
 	}
