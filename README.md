@@ -5,8 +5,13 @@ VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)
 
 A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/VSCode) with rich language support for the courseware used in the (labs of) Computation Structures module (both MIT 6.004 and SUTD 50.002): jsim, tmsim and bsim.
 
+These tools were originally developed by MIT:
+- JSim is a netlist simulator language which serves as a circuit simulator design environment.
+- BSim is a Beta ALU architecture simulator. The β is a RISC processor design (general-purpose 32-bit architecture) used for the course.
+- TMSim is a Turing Machine simulator.
+
 ## Features
-- [ ] Syntax Highlighting
+- [x] Syntax Highlighting (except for BSim)
 - [ ] Semantic Highlighting
 - [ ] Linting (Error Checking)
 - [ ] Refactoring
@@ -27,11 +32,8 @@ This section will describe any requirements and dependencies for this extension,
 
 ## Extension Settings
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+This section will list out the settings contributed by the extension.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+This section will call out known issues to help limit users opening duplicate issues against this extension.
