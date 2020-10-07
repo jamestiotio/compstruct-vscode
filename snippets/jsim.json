@@ -55,7 +55,7 @@
 		"body": [
 			"L${1:name} ${2:inputs} ${3:inductance}"
 		],
-		"description": "Code snippet for a capacitor"
+		"description": "Code snippet for an inductor"
 	},
 	"Voltage source": {
 		"prefix": "v",
