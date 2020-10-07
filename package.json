@@ -25,7 +25,8 @@
         "Programming Languages",
         "Linters",
         "Formatters",
-        "Debuggers"
+        "Debuggers",
+        "Snippets"
     ],
     "keywords": [
         "jsim",
@@ -72,6 +73,12 @@
             "language": "bsim",
             "scopeName": "source.uasm",
             "path": "./syntaxes/bsim.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "jsim",
+                "path": "./snippets/jsim.json"
             }
         ]
     }

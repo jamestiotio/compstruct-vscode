@@ -1,0 +1,39 @@
+{
+	"subcircuit": {
+		"prefix": "subckt",
+		"body": [
+			".subckt ${1:name} ${2:inputs} ${3:outputs}",
+			"$4",
+			".ends"
+		],
+		"description": "Code snippet for defining a subcircuit"
+	},
+	"NFET": {
+		"prefix": "nfet",
+		"body": [
+			"M${1:name} ${2:inputs} ${3:outputs} NFET sw=${4:sw_value} sl=${5:sl_value}"
+		],
+		"description": "Code snippet for defining a NFET MOSFET"
+	},
+	"PFET": {
+		"prefix": "pfet",
+		"body": [
+			"M${1:name} ${2:inputs} ${3:outputs} PFET sw=${4:sw_value} sl=${5:sl_value}"
+		],
+		"description": "Code snippet for defining a PFET MOSFET"
+	},
+	"include": {
+		"prefix": "include",
+		"body": [
+			".include \"${1:location}\""
+		],
+		"description": "Code snippet for an include statement"
+	},
+	"Custom component": {
+		"prefix": "x",
+		"body": [
+			"X${1:name} ${2:inputs} ${3:outputs} ${4:gate}"
+		],
+		"description": "Code snippet for a custom component"
+	}
+}
