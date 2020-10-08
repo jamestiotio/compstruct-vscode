@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.5]
+
+- Add multiple prefixes for snippets for convenience
+
 ## [0.0.4]
 
 - Auto-complete snippets that start with U+002E characters to also include the U+002E characters themselves so as to improve ergonomics

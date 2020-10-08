@@ -1,6 +1,6 @@
 {
 	"subcircuit": {
-		"prefix": "subckt",
+		"prefix": ["subckt", ".subckt"],
 		"body": [
 			".subckt ${1:name} ${2:inputs} ${3:outputs}",
 			"$4",
@@ -23,7 +23,7 @@
 		"description": "Code snippet for defining a PFET MOSFET"
 	},
 	"include": {
-		"prefix": "include",
+		"prefix": ["include", ".include"],
 		"body": [
 			".include \"${1:location}\""
 		],
@@ -79,7 +79,7 @@
 		"description": "Code snippet for a waveform source"
 	},
 	"Connect": {
-		"prefix": "connect",
+		"prefix": ["connect", ".connect"],
 		"body": [
 			".connect ${1:node1} ${2:node2} ${3:nodes}"
 		],
