@@ -11,7 +11,7 @@ These tools were originally developed by MIT:
 - TMSim is a Turing Machine simulator.
 
 ## Features
-- [x] Syntax Highlighting (not implemented yet for BSim)
+- [x] Syntax Highlighting (Still Buggy for BSim)
 - [ ] Semantic Highlighting
 - [ ] Linting (Error Checking)
 - [ ] Refactoring
@@ -19,7 +19,7 @@ These tools were originally developed by MIT:
 - [ ] IntelliSense (Hover Information, Parameter Info & Content Assist)
 - [ ] Code Navigation (Folding & Definition Jumps)
 - [ ] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
-- [x] Snippet Completion (Auto Code Completion) (JSim only)
+- [x] Snippet Completion (Auto Code Completion) (JSim Only)
 - [ ] Language Configuration
 
 You can request for more features by submitting an issue!

@@ -7,29 +7,150 @@
 	],
 	"patterns": [
 		{
+			"include": "#constants"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
+			"comment": "Match control statements",
+			"include": "#ctrl-statements"
+		},
+		{
+			"comment": "Match strings",
 			"include": "#strings"
+		},
+		{
+			"comment": "Match comments",
+			"include": "#comments"
 		}
 	],
 	"repository": {
+		"strings": {
+			"patterns": [
+				{
+					"comment": "Matches double-quoted strings",
+					"name": "string.quoted.double.bsim",
+					"begin": "\"",
+					"end": "\"",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.bsim"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.bsim"
+						}
+					}
+				},
+				{
+					"comment": "Matches single-quoted strings",
+					"name": "string.quoted.single.bsim",
+					"begin": "'",
+					"end": "'",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.bsim"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.bsim"
+						}
+					}
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"comment": "Matches comments starting with |",
+					"name": "comment.line.verticalbar",
+					"begin": "\\|.*",
+					"end": "\\n",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.bsim"
+						}
+					}
+				}
+			]
+		},
+		"ctrl-statements": {
+			"patterns": [
+				{
+					"comment": "Put this higher up in the array last so that it overrides generic control statements",
+					"include": "#include-statement"
+				},
+				{
+					"name": "meta.function.bsim",
+					"match": "(\\.(pcheckoff|tcheckoff|align|ascii|text|breakpoint|protect|unprotect|options|macro|verify|include))($|\\s+)(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.bsim"
+						},
+						"4": {
+							"patterns": [
+								{
+									"include": "#constants"
+								}
+							]
+						}
+					}
+				},
+				{
+					"comment": "For generic identifier Program Counter control statements",
+					"include": "#identifier-statement"
+				}
+			]
+		},
+		"include-statement": {
+			"patterns": [
+				{
+					"comment": "Matches .include statements",
+					"name": "entity.function.bsim",
+					"match": "(\\.include)\\s+(.*)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.import.include.bsim"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#strings"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.register.bsim",
+					"match": "\\b[rR][0-9].*"
+				},
+				{
+					"name": "constant.numeric.bsim",
+					"match": "\\b[0-9]+\\.?[0-9]*"
+				}
+			]
+		},
+		"identifier-statement": {
+			"patterns": [
+				{
+					"name": "meta.function.bsim",
+					"match": "(\\.)\\s+=\\s+(.*)"
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.bsim",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(betaop|betaopc|BETABR|BEQ|BF|BNE|BT|BR|JMP|LD|ST|MOVE|CMOVE|PUSH|POP|ALLOCATE|DEALLOCATE|ADD|ADDC|AND|ANDC|CMPEQ|CMPEQC|CMPLE|CMPLEC|CMPLT|CMPLTC|DIV|DIVC|LDR|MUL|MULC|OR|ORC|SHL|SHLC|SHR|SHRC|SRA|SRAC|SUB|SUBC|XOR|XORC|XNOR|XNORC|CALL|RTN|XRTN|HALT|LONG)\\b"
 			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.bsim",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.bsim",
-					"match": "\\\\."
-				}
-			]
 		}
 	}
 }

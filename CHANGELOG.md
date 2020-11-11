@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.6]
+
+- Add initial syntax highlighting support for BSim (might still not support all possible syntaxes)
+
 ## [0.0.5]
 
 - Add multiple prefixes for snippets for convenience
