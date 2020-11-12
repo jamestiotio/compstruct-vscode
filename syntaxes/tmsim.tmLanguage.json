@@ -60,7 +60,7 @@
 		"constants": {
 			"patterns": [
 				{
-					"name": "constant.numeric.jsim",
+					"name": "constant.numeric.tmsim",
 					"match": "\\b[0-9]+\\.?[0-9]*"
 				}
 			]
@@ -69,33 +69,33 @@
 			"patterns": [
 				{
 					"comment": "Matches double-quoted strings",
-					"name": "string.quoted.double.jsim",
+					"name": "string.quoted.double.tmsim",
 					"begin": "\"",
 					"end": "\"",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.definition.string.begin.jsim"
+							"name": "punctuation.definition.string.begin.tmsim"
 						}
 					},
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.definition.string.end.jsim"
+							"name": "punctuation.definition.string.end.tmsim"
 						}
 					}
 				},
 				{
 					"comment": "Matches single-quoted strings",
-					"name": "string.quoted.single.jsim",
+					"name": "string.quoted.single.tmsim",
 					"begin": "'",
 					"end": "'",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.definition.string.begin.jsim"
+							"name": "punctuation.definition.string.begin.tmsim"
 						}
 					},
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.definition.string.end.jsim"
+							"name": "punctuation.definition.string.end.tmsim"
 						}
 					}
 				}
