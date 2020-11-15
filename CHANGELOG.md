@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.8]
+
+- Fix detection of registers as constants in BSim
+
 ## [0.0.7]
 
 - Add better syntax highlighting support for BSim (hexadecimal constants, inline comments and macro statements)
