@@ -11,7 +11,7 @@ These tools were originally developed by MIT:
 - TMSim is a Turing Machine simulator.
 
 ## Features
-- [x] Syntax Highlighting (Still Buggy for BSim)
+- [x] Syntax Highlighting
 - [ ] Semantic Highlighting
 - [ ] Linting (Error Checking)
 - [ ] Refactoring

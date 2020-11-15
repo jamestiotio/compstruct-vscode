@@ -4,6 +4,11 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.7]
+
+- Add better syntax highlighting support for BSim (hexadecimal constants, inline comments and macro statements)
+- Add syntax highlighting for inline comments for JSim
+
 ## [0.0.6]
 
 - Add initial syntax highlighting support for BSim (might still not support all possible syntaxes)

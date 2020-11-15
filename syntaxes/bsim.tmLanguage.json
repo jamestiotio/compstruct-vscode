@@ -84,6 +84,10 @@
 					"include": "#include-statement"
 				},
 				{
+					"comment": "Put this higher up in the array last so that it overrides generic control statements",
+					"include": "macro-statement"
+				},
+				{
 					"name": "meta.function.bsim",
 					"match": "(\\.(pcheckoff|tcheckoff|align|ascii|text|breakpoint|protect|unprotect|options|macro|verify|include))($|\\s+)(.*)",
 					"captures": {
@@ -94,6 +98,9 @@
 							"patterns": [
 								{
 									"include": "#constants"
+								},
+								{
+									"include": "#comments"
 								}
 							]
 						}
@@ -102,6 +109,36 @@
 				{
 					"comment": "For generic identifier Program Counter control statements",
 					"include": "#identifier-statement"
+				}
+			]
+		},
+		"macro-statement": {
+			"patterns": [
+				{
+					"comment": "Matches .macro statements",
+					"name": "entity.function.bsim",
+					"match": "(\\.macro)(\\s+)([a-zA-Z]+)(\\s?)(\\(([^\\)]+)\\))(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.bsim"
+						},
+						"3": {
+							"name": "entity.name.function.bsim"
+						},
+						"6": {
+							"name": "variable.parameter.bsim"
+						},
+						"7": {
+							"patterns": [
+								{
+									"include": "#strings"
+								},
+								{
+									"include": "#comments"
+								}
+							]
+						}
+					}
 				}
 			]
 		},
@@ -119,6 +156,9 @@
 							"patterns": [
 								{
 									"include": "#strings"
+								},
+								{
+									"include": "#comments"
 								}
 							]
 						}
@@ -129,6 +169,10 @@
 		"constants": {
 			"patterns": [
 				{
+					"name": "constant.numeric.bsim",
+					"match": "0[xX][0-9a-fA-F]+"
+				},
+				{
 					"name": "constant.register.bsim",
 					"match": "\\b[rR][0-9].*"
 				},
@@ -136,13 +180,29 @@
 					"name": "constant.numeric.bsim",
 					"match": "\\b[0-9]+\\.?[0-9]*"
 				}
+				
 			]
 		},
 		"identifier-statement": {
 			"patterns": [
 				{
 					"name": "meta.function.bsim",
-					"match": "(\\.)\\s+=\\s+(.*)"
+					"match": "(\\.)(\\s+)=(\\s+)(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.bsim"
+						},
+						"4": {
+							"patterns": [
+								{
+									"include": "#constants"
+								},
+								{
+									"include": "#comments"
+								}
+							]
+						}
+					}
 				}
 			]
 		},

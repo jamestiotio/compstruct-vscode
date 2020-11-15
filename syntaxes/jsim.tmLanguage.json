@@ -139,6 +139,9 @@
 							"patterns": [
 								{
 									"include": "#constants"
+								},
+								{
+									"include": "#comments-inline"
 								}
 							]
 						}
@@ -160,6 +163,9 @@
 							"patterns": [
 								{
 									"include": "#strings"
+								},
+								{
+									"include": "#comments-inline"
 								}
 							]
 						}
@@ -170,7 +176,7 @@
 		"subckt-statement": {
 			"patterns": [
 				{
-					"comment": "Matches .subckt statements",
+					"comment": "Matches .subckt statements (multiline is not supported by TextMate: https://github.com/microsoft/vscode-textmate/issues/32)",
 					"name": "meta.function.jsim",
 					"match": "(\\.subckt)\\s+(.*)",
 					"captures": {
@@ -178,7 +184,12 @@
 							"name": "entity.name.function.jsim"
 						},
 						"2": {
-							"name": "variable.parameter.jsim"
+							"name": "variable.parameter.jsim",
+							"patterns": [
+								{
+									"include": "#comments-inline"
+								}
+							]
 						}
 					}
 				}
@@ -206,6 +217,9 @@
 							"patterns": [
 								{
 									"include": "#constants"
+								},
+								{
+									"include": "#comments-inline"
 								}
 							]
 						}
