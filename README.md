@@ -37,3 +37,7 @@ This section will list out the settings contributed by this extension.
 ## Known Issues
 
 This section will call out known issues to help limit users opening duplicate issues against this extension.
+
+### JSim Continuation Lines Detection Issue
+
+Multiline detection which spans across newline characters (and indicated by lines starting with the character `+`) might not be supported yet by the TextMate grammar engine as elaborated [here](https://github.com/microsoft/vscode-textmate/issues/32). To add support for this feature, might need to migrate to Monarch instead of TextMate or implement a more sophisticated, real-time detector using TypeScript.

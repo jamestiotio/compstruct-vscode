@@ -4,6 +4,11 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.9]
+
+- Add support for inline comments in TMSim
+- Better detection of constants in TMSim
+
 ## [0.0.8]
 
 - Fix detection of registers as constants in BSim
