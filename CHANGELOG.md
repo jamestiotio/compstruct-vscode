@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.0]
+
+- Add official publishing support to both Visual Studio Code Marketplace and Open VSX Registry
+
 ## [0.0.9]
 
 - Add support for inline comments in TMSim

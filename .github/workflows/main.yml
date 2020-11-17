@@ -4,16 +4,17 @@ on:
     branches:
       - main
 jobs:
-  deploy:
+  publish_to_vscode_marketplace:
+    name: Publish to VSCode Marketplace
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install VSCE
@@ -22,3 +23,22 @@ jobs:
         run: vsce publish -p $VSCE_TOKEN
         env:
           VSCE_TOKEN: ${{ secrets.VS_MARKETPLACE_PAT }}
+  publish_to_openvsx:
+    name: Publish to Open VSX
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies into node_modules directory for this project
+        run: npm install
+      - name: Publish to Open VSX Registry
+        run: npx ovsx publish
+        env:
+          OVSX_PAT: ${{ secrets.OPEN_VSX_PAT }}

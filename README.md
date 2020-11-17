@@ -1,9 +1,13 @@
 # compstruct-vscode
 VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)
 
+## Installation
+
+You can install this repository from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode) or from the [Open VSX Registry](https://open-vsx.org/)!
+
 ## Description
 
-A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/VSCode) with rich language support for the courseware used in the (labs of) Computation Structures module (both MIT 6.004 and SUTD 50.002): jsim, tmsim and bsim.
+This repository hosts a [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/VSCode) with rich language support for the courseware used in the (labs of) Computation Structures module (both MIT 6.004 and SUTD 50.002): jsim, tmsim and bsim.
 
 These tools were originally developed by MIT:
 - JSim is a netlist simulator language which serves as a circuit simulator design environment.
