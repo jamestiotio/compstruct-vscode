@@ -176,7 +176,7 @@
 				{
 					"comment": "Matches registers",
 					"name": "constant.numeric.bsim",
-					"match": "\\b[rR][0-9].*"
+					"match": "\\b[rR][0-9]+"
 				},
 				{
 					"comment": "Matches numeric constants",

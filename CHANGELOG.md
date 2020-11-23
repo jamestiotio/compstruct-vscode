@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.2]
+
+- Fix wrong categorization of trailing characters after register constants in BSim
+
 ## [0.1.1]
 
 - Update README to reflect and link both options to install this extension
