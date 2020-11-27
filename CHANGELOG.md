@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.3]
+
+- Add syntax highlighting for more BSim Beta macro instructions
+
 ## [0.1.2]
 
 - Fix wrong categorization of trailing characters after register constants in BSim
