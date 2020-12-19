@@ -3,7 +3,7 @@ VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)
 
 ## Installation
 
-You can install this repository from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode) or from the [Open VSX Registry](https://open-vsx.org/extension/jamestiotio/compstruct-vscode)!
+You can install this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode) or from the [Open VSX Registry](https://open-vsx.org/extension/jamestiotio/compstruct-vscode)!
 
 ## Description
 
