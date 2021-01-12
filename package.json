@@ -10,16 +10,30 @@
         "email": "james_raphael@mymail.sutd.edu.sg"
     },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/jamestiotio/compstruct-vscode.git"
+        "type": "git",
+        "url": "https://github.com/jamestiotio/compstruct-vscode.git"
     },
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/jamestiotio/compstruct-vscode/issues"
+        "url": "https://github.com/jamestiotio/compstruct-vscode/issues"
     },
     "icon": "images/logo.png",
     "engines": {
         "vscode": "^1.49.0"
+    },
+    "galleryBanner": {
+        "color": "#C80000",
+        "theme": "dark"
+    },
+    "activationEvents": [
+        "onLanguage:jsim",
+        "onLanguage:bsim",
+        "onLanguage:tmsim"
+    ],
+    "main": "./out/extension",
+    "devDependencies": {
+        "vscode": "0.10.x",
+        "typescript": "^1.6.2"
     },
     "categories": [
         "Programming Languages",
@@ -40,39 +54,54 @@
     "contributes": {
         "languages": [
             {
-            "id": "jsim",
-            "aliases": ["JSim", "jsim"],
-            "extensions": [".jsim"],
-            "configuration": "./language-configuration.json"
+                "id": "jsim",
+                "aliases": [
+                    "JSim",
+                    "jsim"
+                ],
+                "extensions": [
+                    ".jsim"
+                ],
+                "configuration": "./language-configuration.json"
             },
             {
-            "id": "tmsim",
-            "aliases": ["TMSim", "tmsim"],
-            "extensions": [".tmsim"],
-            "configuration": "./language-configuration.json"
+                "id": "tmsim",
+                "aliases": [
+                    "TMSim",
+                    "tmsim"
+                ],
+                "extensions": [
+                    ".tmsim"
+                ],
+                "configuration": "./language-configuration.json"
             },
             {
-            "id": "bsim",
-            "aliases": ["BSim", "bsim"],
-            "extensions": [".uasm"],
-            "configuration": "./language-configuration.json"
+                "id": "bsim",
+                "aliases": [
+                    "BSim",
+                    "bsim"
+                ],
+                "extensions": [
+                    ".uasm"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-            "language": "jsim",
-            "scopeName": "source.jsim",
-            "path": "./syntaxes/jsim.tmLanguage.json"
+                "language": "jsim",
+                "scopeName": "source.jsim",
+                "path": "./syntaxes/jsim.tmLanguage.json"
             },
             {
-            "language": "tmsim",
-            "scopeName": "source.tmsim",
-            "path": "./syntaxes/tmsim.tmLanguage.json"
+                "language": "tmsim",
+                "scopeName": "source.tmsim",
+                "path": "./syntaxes/tmsim.tmLanguage.json"
             },
             {
-            "language": "bsim",
-            "scopeName": "source.uasm",
-            "path": "./syntaxes/bsim.tmLanguage.json"
+                "language": "bsim",
+                "scopeName": "source.uasm",
+                "path": "./syntaxes/bsim.tmLanguage.json"
             }
         ],
         "snippets": [
@@ -81,5 +110,8 @@
                 "path": "./snippets/jsim.json"
             }
         ]
+    },
+    "scripts": {
+        "compile": "tsc -watch -p ./"
     }
 }

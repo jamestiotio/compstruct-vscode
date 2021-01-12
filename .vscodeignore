@@ -1,3 +1,21 @@
 .vscode/**
 .vscode-test/**
+.vscode test/**
+.editorconfig
+.env
+.eslintrc
+.gitattributes
 .gitignore
+.gitmodules
+.npmrc
+.nvmrc
+.github/**
+*.vsix
+tsconfig*.json
+
+src/**
+languageServer/**
+languageServer.*/**
+nodeLanguageServer/**
+nodeLanguageServer.*/**
+bin/**
