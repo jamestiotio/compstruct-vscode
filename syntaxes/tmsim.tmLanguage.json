@@ -1,160 +1,158 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"scopeName": "source.tmsim",
-	"name": "TMSim",
-	"fileTypes": [
-		"tmsim"
-	],
-	"patterns": [
-		{
-			"comment": "Match tmsim statements",
-			"include": "#tmsim-statements"
-		},
-		{
-			"comment": "Match comments",
-			"include": "#comments-inline"
-		}
-	],
-	"repository": {
-		"comments": {
-			"patterns": [
-				{
-					"comment": "Empty comment block",
-					"name": "comment.block.empty.tmsim",
-					"match": "/\\*\\*/",
-					"captures": {
-						"0": {
-							"name": "punctuation.definition.comment.tmsim"
-						}
-					}
-				},
-				{
-					"include": "#comments-inline"
-				}
-			]
-		},
-		"comments-inline": {
-			"patterns": [
-				{
-					"name": "comment.block.tmsim",
-					"begin": "/\\*",
-					"end": "\\*/",
-					"captures": {
-						"0": {
-							"name": "punctuation.definition.comment.tmsim"
-						}
-					}
-				},
-				{
-					"comment": "1 matches any whitespace preceding //, 2 end matches //, end matches the newline",
-					"name": "comment.line.double-slash.tmsim",
-					"begin": "(^[ \\t]+)?(//)",
-					"end": "\\n",
-					"beginCaptures": {
-						"1": {
-							"name": "punctuation.whitespace.comment.leading.tmsim"
-						},
-						"2": {
-							"name": "punctuation.definition.comment.tmsim"
-						}
-					}
-				}
-			]
-		},
-		"tmsim-statements": {
-			"patterns": [
-				{
-					"comment": "Matches tmsim statements and highlights parameters separately",
-					"name": "meta.function.tmsim",
-					"match": "(symbols|states|action|tape|result|result1)(?=\\s)\\s*(.*)",
-					"captures": {
-						"1": {
-							"name": "entity.name.function.tmsim"
-						},
-						"2": {
-							"patterns": [
-								{
-									"include": "#constants"
-								},
-								{
-									"include": "#comments-inline"
-								}
-							]
-						}
-					}
-				},
-				{
-					"include": "#checkoff-statement"
-				}
-			]
-		},
-		"checkoff-statement": {
-			"patterns": [
-				{
-					"comment": "Matches tmsim checkoff statement and highlights string parameter",
-					"name": "meta.function.tmsim",
-					"match": "(checkoff)(?=\\s)\\s*(.*)",
-					"captures": {
-						"1": {
-							"name": "entity.name.function.tmsim"
-						},
-						"2": {
-							"patterns": [
-								{
-									"include": "#strings"
-								},
-								{
-									"include": "#constants"
-								}
-							]
-						}
-					}
-				}
-			]
-		},
-		"constants": {
-			"patterns": [
-				{
-					"name": "constant.numeric.tmsim",
-					"match": "\\b[0-9]+\\.?[0-9]*"
-				}
-			]
-		},
-		"strings": {
-			"patterns": [
-				{
-					"comment": "Matches double-quoted strings",
-					"name": "string.quoted.double.tmsim",
-					"begin": "\"",
-					"end": "\"",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.begin.tmsim"
-						}
-					},
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.end.tmsim"
-						}
-					}
-				},
-				{
-					"comment": "Matches single-quoted strings",
-					"name": "string.quoted.single.tmsim",
-					"begin": "'",
-					"end": "'",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.begin.tmsim"
-						}
-					},
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.string.end.tmsim"
-						}
-					}
-				}
-			]
-		}
-	}
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "scopeName": "source.tmsim",
+    "name": "TMSim",
+    "fileTypes": ["tmsim"],
+    "patterns": [
+        {
+            "comment": "Match tmsim statements",
+            "include": "#tmsim-statements"
+        },
+        {
+            "comment": "Match comments",
+            "include": "#comments-inline"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "comment": "Empty comment block",
+                    "name": "comment.block.empty.tmsim",
+                    "match": "/\\*\\*/",
+                    "captures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.tmsim"
+                        }
+                    }
+                },
+                {
+                    "include": "#comments-inline"
+                }
+            ]
+        },
+        "comments-inline": {
+            "patterns": [
+                {
+                    "name": "comment.block.tmsim",
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "captures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.tmsim"
+                        }
+                    }
+                },
+                {
+                    "comment": "1 matches any whitespace preceding //, 2 end matches //, end matches the newline",
+                    "name": "comment.line.double-slash.tmsim",
+                    "begin": "(^[ \\t]+)?(//)",
+                    "end": "\\n",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "punctuation.whitespace.comment.leading.tmsim"
+                        },
+                        "2": {
+                            "name": "punctuation.definition.comment.tmsim"
+                        }
+                    }
+                }
+            ]
+        },
+        "tmsim-statements": {
+            "patterns": [
+                {
+                    "comment": "Matches tmsim statements and highlights parameters separately",
+                    "name": "meta.function.tmsim",
+                    "match": "(symbols|states|action|tape|result|result1)(?=\\s)\\s*(.*)",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.function.tmsim"
+                        },
+                        "2": {
+                            "patterns": [
+                                {
+                                    "include": "#constants"
+                                },
+                                {
+                                    "include": "#comments-inline"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "include": "#checkoff-statement"
+                }
+            ]
+        },
+        "checkoff-statement": {
+            "patterns": [
+                {
+                    "comment": "Matches tmsim checkoff statement and highlights string parameter",
+                    "name": "meta.function.tmsim",
+                    "match": "(checkoff)(?=\\s)\\s*(.*)",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.function.tmsim"
+                        },
+                        "2": {
+                            "patterns": [
+                                {
+                                    "include": "#strings"
+                                },
+                                {
+                                    "include": "#constants"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.tmsim",
+                    "match": "\\b[0-9]+\\.?[0-9]*"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "comment": "Matches double-quoted strings",
+                    "name": "string.quoted.double.tmsim",
+                    "begin": "\"",
+                    "end": "\"",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.tmsim"
+                        }
+                    },
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.tmsim"
+                        }
+                    }
+                },
+                {
+                    "comment": "Matches single-quoted strings",
+                    "name": "string.quoted.single.tmsim",
+                    "begin": "'",
+                    "end": "'",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.tmsim"
+                        }
+                    },
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.tmsim"
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }

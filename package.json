@@ -67,7 +67,7 @@
                 "extensions": [
                     ".jsim"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./jsim-language-configuration.json"
             },
             {
                 "id": "tmsim",
@@ -78,7 +78,7 @@
                 "extensions": [
                     ".tmsim"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./tmsim-language-configuration.json"
             },
             {
                 "id": "bsim",
@@ -89,7 +89,7 @@
                 "extensions": [
                     ".uasm"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./bsim-language-configuration.json"
             }
         ],
         "grammars": [
