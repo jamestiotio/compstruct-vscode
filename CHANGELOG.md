@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.1]
+
+- Fix VSCode Marketplace workflow deployment file
+
 ## [0.2.0]
 
 - Add basic code folding capabilities

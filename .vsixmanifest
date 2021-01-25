@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Language="en-US" Id="compstruct-vscode" Version="0.2.0" Publisher="jamestiotio"/>
+    <Identity Language="en-US" Id="compstruct-vscode" Version="0.2.1" Publisher="jamestiotio"/>
     <DisplayName>CompStruct VSCode</DisplayName>
     <Description xml:space="preserve">VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)</Description>
     <Tags>jsim,bsim,tmsim,JSim,BSim,TMSim,__ext_.jsim,__ext_.uasm,__ext_.tmsim</Tags>

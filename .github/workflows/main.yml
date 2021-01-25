@@ -19,6 +19,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install VSCE
         run: npm install -g vsce
+      - name: Install dependencies into node_modules directory for this project
+        run: npm install
       - name: Publish to Visual Studio Code Marketplace
         run: vsce publish -p $VSCE_TOKEN
         env:
