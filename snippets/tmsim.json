@@ -44,7 +44,7 @@
     "result1": {
         "prefix": ["result1"],
         "body": [
-            "result ${1:name} ${2:symbol}"
+            "result1 ${1:name} ${2:symbol}"
         ],
         "description": "Code snippet for defining a result, but only the current symbol is checked against the specified value"
     }
