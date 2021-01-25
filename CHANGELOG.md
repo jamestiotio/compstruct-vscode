@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.2]
+
+- Change extension banner color to achieve balance between satisfying WCAG AA accessibility standards and being web-safe
+
 ## [0.2.1]
 
 - Fix VSCode Marketplace workflow deployment file

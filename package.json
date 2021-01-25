@@ -2,7 +2,7 @@
     "name": "compstruct-vscode",
     "displayName": "CompStruct VSCode",
     "description": "VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "publisher": "jamestiotio",
     "homepage": "https://github.com/jamestiotio/compstruct-vscode",
     "author": {
@@ -22,7 +22,7 @@
         "vscode": "^1.49.0"
     },
     "galleryBanner": {
-        "color": "#C80000",
+        "color": "#006666",
         "theme": "dark"
     },
     "activationEvents": [
