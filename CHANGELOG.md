@@ -4,6 +4,14 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.0]
+
+- Add basic code folding capabilities
+- Improve auto-indentation, bracket-matching, bracket-autosurrounding and bracket-autoclosing
+- Separate language configuration files for clearer directory management
+- Add more snippets for TMSim and BSim
+- Fix indentation for JSim snippet configuration JSON file
+
 ## [0.1.3]
 
 - Add syntax highlighting for more BSim Beta macro instructions

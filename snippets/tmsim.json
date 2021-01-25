@@ -1,0 +1,51 @@
+{
+    "checkoff": {
+        "prefix": ["checkoff"],
+        "body": [
+            "checkoff \"${1:server}\" \"${2:assignment}\" ${3:checksum}"
+        ],
+        "description": "Code snippet for a checkoff statement"
+    },
+    "symbols": {
+        "prefix": ["symbols"],
+        "body": [
+            "symbols ${1:symbols}"
+        ],
+        "description": "Code snippet for defining symbols"
+    },
+    "states": {
+        "prefix": ["states"],
+        "body": [
+            "states ${1:states}"
+        ],
+        "description": "Code snippet for defining states"
+    },
+    "action": {
+        "prefix": ["action"],
+        "body": [
+            "action ${1:state} ${2:symbol} ${3:newstate} ${4:writesymbol} ${5:motion}"
+        ],
+        "description": "Code snippet for defining an action"
+    },
+    "tape": {
+        "prefix": ["tape"],
+        "body": [
+            "tape ${1:name} ${2:symbols}"
+        ],
+        "description": "Code snippet for defining a tape"
+    },
+    "result": {
+        "prefix": ["result"],
+        "body": [
+            "result ${1:name} ${2:symbols}"
+        ],
+        "description": "Code snippet for defining a result"
+    },
+    "result1": {
+        "prefix": ["result1"],
+        "body": [
+            "result ${1:name} ${2:symbol}"
+        ],
+        "description": "Code snippet for defining a result, but only the current symbol is checked against the specified value"
+    }
+}

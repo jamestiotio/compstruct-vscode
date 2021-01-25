@@ -1,0 +1,18 @@
+{
+    "include": {
+        "prefix": ["include", ".include"],
+        "body": [
+            ".include ${1:location}"
+        ],
+        "description": "Code snippet for an include statement"
+    },
+    "macro": {
+        "prefix": ["macro", ".macro"],
+        "body": [
+            ".macro ${1:name}(${2:params}) {",
+            "$3",
+            "}"
+        ],
+        "description": "Code snippet for defining a macro"
+    }
+}

@@ -17,13 +17,14 @@ These tools were originally developed by MIT:
 ## Features
 - [x] Syntax Highlighting
 - [ ] Semantic Highlighting
-- [ ] Linting (Error Checking)
+- [ ] Linting (Syntax & Style Error Checking)
 - [ ] Refactoring
 - [ ] Debugging
-- [ ] IntelliSense (Hover Information, Parameter Info & Content Assist)
-- [ ] Code Navigation (Folding & Definition Jumps)
-- [ ] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
-- [x] Snippet Completion (Auto Code Completion) (JSim Only)
+- [ ] IntelliSense (Hover Information, Parameter Info, Auto-Completion & Content Assist)
+- [x] Code Navigation (Folding)
+- [ ] Code Navigation (Definition Jumps)
+- [x] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
+- [x] Snippet Completion (Auto Code Completion)
 - [ ] Language Configuration
 
 You can request for more features by submitting an issue!

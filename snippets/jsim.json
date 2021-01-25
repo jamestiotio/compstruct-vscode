@@ -1,88 +1,88 @@
 {
-	"subcircuit": {
-		"prefix": ["subckt", ".subckt"],
-		"body": [
-			".subckt ${1:name} ${2:inputs} ${3:outputs}",
-			"$4",
-			".ends"
-		],
-		"description": "Code snippet for defining a subcircuit"
-	},
-	"NFET": {
-		"prefix": "nfet",
-		"body": [
-			"M${1:name} ${2:inputs} ${3:outputs} NFET sw=${4:sw_value} sl=${5:sl_value}"
-		],
-		"description": "Code snippet for defining a NFET MOSFET"
-	},
-	"PFET": {
-		"prefix": "pfet",
-		"body": [
-			"M${1:name} ${2:inputs} ${3:outputs} PFET sw=${4:sw_value} sl=${5:sl_value}"
-		],
-		"description": "Code snippet for defining a PFET MOSFET"
-	},
-	"include": {
-		"prefix": ["include", ".include"],
-		"body": [
-			".include \"${1:location}\""
-		],
-		"description": "Code snippet for an include statement"
-	},
-	"User-defined component": {
-		"prefix": "x",
-		"body": [
-			"X${1:name} ${2:inputs} ${3:outputs} ${4:gate}"
-		],
-		"description": "Code snippet for a user-defined component"
-	},
-	"Resistor": {
-		"prefix": "r",
-		"body": [
-			"R${1:name} ${2:inputs} ${3:resistance}"
-		],
-		"description": "Code snippet for a resistor"
-	},
-	"Capacitor": {
-		"prefix": "c",
-		"body": [
-			"C${1:name} ${2:inputs} ${3:capacitance}"
-		],
-		"description": "Code snippet for a capacitor"
-	},
-	"Inductor": {
-		"prefix": "l",
-		"body": [
-			"L${1:name} ${2:inputs} ${3:inductance}"
-		],
-		"description": "Code snippet for an inductor"
-	},
-	"Voltage source": {
-		"prefix": "v",
-		"body": [
-			"V${1:name} ${2:positive_node} ${3:negative_node} ${4:voltage}V"
-		],
-		"description": "Code snippet for a voltage source"
-	},
-	"Current source": {
-		"prefix": "i",
-		"body": [
-			"I${1:name} ${2:positive_node} ${3:negative_node} ${4:current}A"
-		],
-		"description": "Code snippet for a current source"
-	},
-	"Waveform source": {
-		"prefix": "w",
-		"body": [
-			"W${1:name} ${2:nodes} nrz(${3:v_low}, ${4:v_high}, ${5:t_period}, ${6:t_delay}, ${7:t_rise}, ${8:t_fall}) ${9:data}"
-		],
-		"description": "Code snippet for a waveform source"
-	},
-	"Connect": {
-		"prefix": ["connect", ".connect"],
-		"body": [
-			".connect ${1:node1} ${2:node2} ${3:nodes}"
-		],
-		"description": "Code snippet for a connection"
-	}
+    "subcircuit": {
+        "prefix": ["subckt", ".subckt"],
+        "body": [
+            ".subckt ${1:name} ${2:inputs} ${3:outputs}",
+            "$4",
+            ".ends"
+        ],
+        "description": "Code snippet for defining a subcircuit"
+    },
+    "NFET": {
+        "prefix": "nfet",
+        "body": [
+            "M${1:name} ${2:inputs} ${3:outputs} NFET sw=${4:sw_value} sl=${5:sl_value}"
+        ],
+        "description": "Code snippet for defining a NFET MOSFET"
+    },
+    "PFET": {
+        "prefix": "pfet",
+        "body": [
+            "M${1:name} ${2:inputs} ${3:outputs} PFET sw=${4:sw_value} sl=${5:sl_value}"
+        ],
+        "description": "Code snippet for defining a PFET MOSFET"
+    },
+    "include": {
+        "prefix": ["include", ".include"],
+        "body": [
+            ".include \"${1:location}\""
+        ],
+        "description": "Code snippet for an include statement"
+    },
+    "User-Defined Component": {
+        "prefix": "x",
+        "body": [
+            "X${1:name} ${2:inputs} ${3:outputs} ${4:gate}"
+        ],
+        "description": "Code snippet for a user-defined component"
+    },
+    "Resistor": {
+        "prefix": "r",
+        "body": [
+            "R${1:name} ${2:inputs} ${3:resistance}"
+        ],
+        "description": "Code snippet for a resistor"
+    },
+    "Capacitor": {
+        "prefix": "c",
+        "body": [
+            "C${1:name} ${2:inputs} ${3:capacitance}"
+        ],
+        "description": "Code snippet for a capacitor"
+    },
+    "Inductor": {
+        "prefix": "l",
+        "body": [
+            "L${1:name} ${2:inputs} ${3:inductance}"
+        ],
+        "description": "Code snippet for an inductor"
+    },
+    "Voltage Source": {
+        "prefix": "v",
+        "body": [
+            "V${1:name} ${2:positive_node} ${3:negative_node} ${4:voltage}V"
+        ],
+        "description": "Code snippet for a voltage source"
+    },
+    "Current Source": {
+        "prefix": "i",
+        "body": [
+            "I${1:name} ${2:positive_node} ${3:negative_node} ${4:current}A"
+        ],
+        "description": "Code snippet for a current source"
+    },
+    "Waveform Source": {
+        "prefix": "w",
+        "body": [
+            "W${1:name} ${2:nodes} nrz(${3:v_low}, ${4:v_high}, ${5:t_period}, ${6:t_delay}, ${7:t_rise}, ${8:t_fall}) ${9:data}"
+        ],
+        "description": "Code snippet for a waveform source"
+    },
+    "connect": {
+        "prefix": ["connect", ".connect"],
+        "body": [
+            ".connect ${1:node1} ${2:node2} ${3:nodes}"
+        ],
+        "description": "Code snippet for a connection"
+    }
 }
