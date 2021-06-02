@@ -50,3 +50,13 @@ Multiline detection which spans across newline characters (and indicated by line
 ### Syntax Highlighting for Negative Numbers
 
 More work needs to be done since attempts of using regular expressions to syntax-highlight negative numbers (i.e. including the hyphens) did not work as intended.
+
+## Additional Resources
+
+Here are some available useful resources (such as syntax highlighting for other editors and official MIT source code for JSim, BSim and TMSim online editors):
+
+- [BSim Syntax Highlighting on Emacs](https://github.com/nexaitch/bsim-mode)
+- [BSim Syntax Highlighting on Vim](https://github.com/JSeam2/BSimSyntaxHighlighting)
+- [JSim and TMSim Syntax Highlighting on Atom](https://github.com/tjjjwxzq/language-jsim)
+- [Old MIT 6.004 Courseware Materials](https://github.com/terman/6.004_courseware)
+- [Newer Latest MIT 6.004 Browser-Based Online Courseware Tools](https://github.com/6004x)
