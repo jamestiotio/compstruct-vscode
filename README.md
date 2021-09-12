@@ -47,7 +47,7 @@ This section will call out known issues to help limit users opening duplicate is
 
 ### JSim Continuation Lines Detection Issue
 
-Multiline detection which spans across newline characters (and indicated by lines starting with the character `+`) might not be supported yet by the TextMate grammar engine as elaborated [here](https://github.com/microsoft/vscode-textmate/issues/32). To add support for this feature, might need to migrate to Monarch instead of TextMate or implement a more sophisticated, real-time detector using TypeScript.
+Multiline detection which spans across newline characters (and indicated by lines starting with the character `+`) might not be supported yet by the TextMate grammar engine as elaborated [here](https://github.com/microsoft/vscode-textmate/issues/32). To add support for this feature, might need to migrate to Monarch instead of TextMate or implement a more sophisticated, real-time detector using TypeScript. Dynamic analysis could also be done via implementing a language server (which would be the ideal choice going forward).
 
 ### Syntax Highlighting for Negative Numbers
 

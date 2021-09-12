@@ -14,3 +14,4 @@ languageServer.*/**
 **/.vscode-test/**
 **/.vscode test/**
 **/.vscode-smoke/**
+.dccache
