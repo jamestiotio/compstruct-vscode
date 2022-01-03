@@ -21,6 +21,8 @@ jobs:
         run: npm install -g vsce
       - name: Install dependencies into node_modules directory for this project
         run: npm install
+      - name: Compile extension's source code
+        run: npm run compile
       - name: Publish to Visual Studio Code Marketplace
         run: vsce publish -p $VSCE_TOKEN
         env:
@@ -40,6 +42,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies into node_modules directory for this project
         run: npm install
+      - name: Compile extension's source code
+        run: npm run compile
       - name: Publish to Open VSX Registry
         run: npx ovsx publish
         env:

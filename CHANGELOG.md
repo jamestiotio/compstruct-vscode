@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.7]
+
+-   Update CI workflow file to actually compile extension from TypeScript to JavaScript
+
 ## [0.2.6]
 
 -   Update CI deployment Node version to v14.x
