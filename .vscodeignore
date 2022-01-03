@@ -14,8 +14,11 @@
 tsconfig*.json
 
 src/**
+node_modules/**
 languageServer/**
 languageServer.*/**
 nodeLanguageServer/**
 nodeLanguageServer.*/**
-bin/**
+webpack.config.js
+
+!out/extension.js
