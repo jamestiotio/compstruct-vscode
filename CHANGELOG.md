@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.6]
+
+-   Update CI deployment Node version to v14.x
+
 ## [0.2.5]
 
 -   Update main README to clearly separate the list of available features from upcoming features
