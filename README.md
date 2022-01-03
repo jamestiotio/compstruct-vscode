@@ -20,16 +20,21 @@ These tools were originally developed by MIT:
 
 ## Features
 
+Currently available features:
+
 -   [x] Syntax Highlighting
+-   [x] Code Navigation (Folding)
+-   [x] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
+-   [x] Snippet Completion (Auto Code Completion)
+
+Features in the works:
+
 -   [ ] Semantic Highlighting
 -   [ ] Linting (Syntax & Style Error Checking)
 -   [ ] Refactoring
 -   [ ] Debugging
 -   [ ] IntelliSense (Hover Information, Parameter Info, Auto-Completion & Content Assist)
--   [x] Code Navigation (Folding)
 -   [ ] Code Navigation (Definition Jumps)
--   [x] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
--   [x] Snippet Completion (Auto Code Completion)
 -   [ ] Language Configuration
 
 You can request for more features by submitting an issue!
@@ -40,9 +45,11 @@ Feel free to also contribute via submitting a pull request! For contributors, pl
 
 This section will describe any requirements and dependencies for this extension, as well as how to install and configure them for this extension to work properly.
 
+Currently, only [Microsoft Visual Studio Code](https://code.visualstudio.com/) (or its vendor-neutral open-source alternatives) is needed to run this extension. As more features are added to this extension, more requirements might be needed in the future, so do keep a lookout!
+
 ## Extension Settings
 
-This section will list out the settings contributed by this extension.
+This section will list out the settings contributed by this extension. Coming soon!
 
 ## Known Issues
 

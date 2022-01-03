@@ -4,6 +4,10 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.5]
+
+-   Update main README to clearly separate the list of available features from upcoming features
+
 ## [0.2.4]
 
 -   Allow extension to be downloaded, installed and executed in VS Code for the Web (GitHub Codespaces).
