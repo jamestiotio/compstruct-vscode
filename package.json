@@ -53,9 +53,19 @@
         "tmsim",
         "bsim",
         "uasm",
+        "beta",
+        "risc",
+        "netlist",
+        "circuit",
+        "alu",
+        "turing",
+        "machine",
         "grammar",
         "syntax",
-        "highlight"
+        "highlight",
+        "snippet",
+        "sutd",
+        "mit"
     ],
     "contributes": {
         "languages": [
