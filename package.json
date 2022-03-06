@@ -133,7 +133,17 @@
                 "language": "bsim",
                 "path": "./snippets/bsim.json"
             }
-        ]
+        ],
+        "commands": [
+            {
+                "command": "compstruct-vscode.jsimTerminal",
+                "title": "Run JSim with current file"
+            },
+            {
+                "command": "compstruct-vscode.bsimTerminal",
+                "title": "Run BSim with current file"
+            }
+          ]
     },
     "scripts": {
         "compile": "tsc -p ./"
