@@ -1,21 +1,21 @@
 {
-    "name": "compstruct-vscode",
-    "displayName": "CompStruct VSCode",
+    "name": "compstruct-vscode-fork",
+    "displayName": "CompStruct VSCode with Run",
     "description": "VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)",
-    "version": "0.2.8",
-    "publisher": "jamestiotio",
-    "homepage": "https://github.com/jamestiotio/compstruct-vscode",
+    "version": "0.0.1",
+    "publisher": "iangohy",
+    "homepage": "https://github.com/iangohy/compstruct-vscode",
     "author": {
-        "name": "James Raphael Tiovalen",
-        "email": "james_raphael@mymail.sutd.edu.sg"
+        "name": "Ian Goh",
+        "email": "ian@iangohy.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jamestiotio/compstruct-vscode.git"
+        "url": "https://github.com/iangohy/compstruct-vscode"
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/jamestiotio/compstruct-vscode/issues"
+        "url": "https://github.com/iangohy/compstruct-vscode/issues"
     },
     "icon": "images/logo.png",
     "engines": {

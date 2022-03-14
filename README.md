@@ -2,11 +2,11 @@
 
 VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)
 
-<p align="center"><a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode&ssr=false#review-details"><img src="https://vsmarketplacebadge.apphb.com/rating-star/jamestiotio.compstruct-vscode.svg?style=for-the-badge&colorA=FBBD30&colorB=F2AA08"/></a> <a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode"><img src="https://vsmarketplacebadge.apphb.com/downloads-short/jamestiotio.compstruct-vscode.svg?style=for-the-badge&colorA=5DDB61&colorB=4BC74F&label=DOWNLOADS"/></a> <a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode"><img src="https://vsmarketplacebadge.apphb.com/installs-short/jamestiotio.compstruct-vscode.svg?style=for-the-badge&colorA=8a2be2&colorB=7f26cc&label=INSTALLS"/></a></p>
+Forked from https://github.com/jamestiotio/compstruct-vscode. Credits to the original project for syntax highlighting and code formatting.
 
 ## Installation
 
-You can install this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode) or from the [Open VSX Registry](https://open-vsx.org/extension/jamestiotio/compstruct-vscode)!
+You can install this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=iangohy.compstruct-vscode-fork).
 
 ## Description
 
@@ -19,28 +19,12 @@ These tools were originally developed by MIT:
 -   TMSim is a Turing Machine simulator.
 
 ## Features
-
-Currently available features:
-
 -   [x] Syntax Highlighting
 -   [x] Code Navigation (Folding)
 -   [x] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
 -   [x] Snippet Completion (Auto Code Completion)
 -   [x] One click to run current file in JSim/BSim (.jar files have to be in same directory as currently open file)
 
-Features in the works:
-
--   [ ] Semantic Highlighting
--   [ ] Linting (Syntax & Style Error Checking)
--   [ ] Refactoring
--   [ ] Debugging
--   [ ] IntelliSense (Hover Information, Parameter Info, Auto-Completion & Content Assist)
--   [ ] Code Navigation (Definition Jumps)
--   [ ] Language Configuration
-
-You can request for more features by submitting an issue!
-
-Feel free to also contribute via submitting a pull request! For contributors, please check the included tool documentations in the [`docs`](https://github.com/jamestiotio/compstruct-vscode/tree/main/docs) folder for your reference when further developing this extension!
 
 ## Requirements
 
