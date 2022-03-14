@@ -23,7 +23,7 @@ These tools were originally developed by MIT:
 -   [x] Code Navigation (Folding)
 -   [x] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
 -   [x] Snippet Completion (Auto Code Completion)
--   [x] One click to run current file in JSim/BSim (.jar files have to be in same directory as currently open file)
+-   [x] One click to run current file in JSim/BSim (.jar files have to be current VSCode workspace)
 
 
 ## Requirements
