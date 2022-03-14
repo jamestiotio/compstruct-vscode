@@ -22,3 +22,22 @@ export function runJar(jarname: string) {
         terminal?.sendText(`java -jar ${jarname}.jar ${filename}`);
     }
 }
+
+export function checkAndDisplayBtns(jsimBtn: vscode.StatusBarItem, bsimBtn: vscode.StatusBarItem) {
+    // Check user configuration
+    const statusBarBtnConfig = vscode.workspace.getConfiguration("compstruct-vscode.statusBarButton");
+    const bsimEnable = statusBarBtnConfig.get("BSim");
+    const jsimEnable = statusBarBtnConfig.get("JSim");
+
+    // Add status bar button
+    if (bsimEnable) {
+        bsimBtn.show();
+    } else {
+        bsimBtn.hide();
+    }
+    if (jsimEnable) {
+        jsimBtn.show();
+    } else {
+        jsimBtn.hide();
+    }
+}

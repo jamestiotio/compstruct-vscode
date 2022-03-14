@@ -143,7 +143,22 @@
                 "command": "compstruct-vscode.bsimTerminal",
                 "title": "Run BSim with current file"
             }
-          ]
+        ],
+        "configuration": {
+            "title": "CompStruct VSCode",
+            "properties": {
+                "compstruct-vscode.statusBarButton.JSim": {
+                    "type": "boolean",
+                    "default": "true",
+                    "description": "Show 'Run JSim' button in status bar"
+                },
+                "compstruct-vscode.statusBarButton.BSim": {
+                    "type": "boolean",
+                    "default": "true",
+                    "description": "Show 'Run BSim' button in status bar"
+                }
+            }
+        }
     },
     "scripts": {
         "compile": "tsc -p ./"
