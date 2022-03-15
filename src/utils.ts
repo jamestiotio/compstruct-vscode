@@ -37,9 +37,9 @@ async function findJarAndRun(uri: vscode.Uri, jarname: string) {
         // Get filename of current file
         const filepath = vscode.window.activeTextEditor?.document.uri.fsPath;
         if (!filepath) {
-            terminal?.sendText(`java -jar ${jarUri.path} &`);
+            terminal?.sendText(`java -jar ${jarUri.fsPath}`);
         } else {
-            terminal?.sendText(`java -jar ${jarUri.path} ${filepath} &`);
+            terminal?.sendText(`java -jar ${jarUri.fsPath} ${filepath}`);
         }
 
         return true;
