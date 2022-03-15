@@ -31,11 +31,11 @@ export async function activate(context: vscode.ExtensionContext) {
     })
 
     context.subscriptions.push(vscode.commands.registerCommand('compstruct-vscode.jsimTerminal', () => {
-        runJar("jsim")
+        runJar("jsim");
 	}));
 
     context.subscriptions.push(vscode.commands.registerCommand('compstruct-vscode.bsimTerminal', () => {
-        runJar("bsim")
+        runJar("bsim");
 	}));
 }
 

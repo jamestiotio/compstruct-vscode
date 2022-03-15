@@ -1,10 +1,28 @@
 import * as vscode from 'vscode';
 
-export function runJar(jarname: string) {
+export async function runJar(jarname: string) {
+    // Find .jar files recursively in each workspace and in all directories
+    // Run .jar with currently open file
+    const workspaceFolders = vscode.workspace.workspaceFolders?.map(folder => folder.uri) || [];
+    if (workspaceFolders.length == 0) {
+        vscode.window.showErrorMessage("No workspace folder opened!");
+    } else {
+        let foundJar;
+        for (const folder of workspaceFolders) {
+            foundJar = await findJarAndRun(folder, jarname);
+        }
+        if (!foundJar) {
+            vscode.window.showErrorMessage(`Unable to find ${jarname}.jar`)
+        }
+    }
+
+}
+
+async function findJarAndRun(uri: vscode.Uri, jarname: string) {
     // Find terminal if exists
     let terminal;
     for (const term of vscode.window.terminals) {
-        const name = term.name
+        const name = term.name;
         if (name === jarname) {
             terminal = term;
         }
@@ -12,15 +30,44 @@ export function runJar(jarname: string) {
     if (!terminal) {
         terminal = vscode.window.createTerminal(jarname);
     }
-    const filepath = vscode.window.activeTextEditor?.document.uri.fsPath;
-    if (!filepath) {
-        terminal?.sendText(`java -jar ${jarname}.jar`)
-    } else {
-        const filenames = filepath?.split("/")
-        const filename = filenames[filenames.length - 1];
-        console.log("filepath", vscode.window.activeTextEditor?.document.uri.fsPath);
-        terminal?.sendText(`java -jar ${jarname}.jar ${filename}`);
+
+    const jarUri = await findJar(uri, jarname);
+
+    if (jarUri) {
+        // Get filename of current file
+        const filepath = vscode.window.activeTextEditor?.document.uri.fsPath;
+        if (!filepath) {
+            terminal?.sendText(`java -jar ${jarUri.path} &`);
+        } else {
+            terminal?.sendText(`java -jar ${jarUri.path} ${filepath} &`);
+        }
+
+        return true;
     }
+
+    return false;
+}
+
+async function findJar(uri: vscode.Uri, jarname: string) : Promise<vscode.Uri | null>{
+    const dir = await vscode.workspace.fs.readDirectory(uri);
+    let folders: string[] = [];
+
+    // Find jarname.jar (case insensitive finding) in root
+    const filename = jarname + ".jar"
+    for (let i=0; i<dir.length; i++) {
+        if (filename.toLowerCase() == dir[i][0].toLowerCase()) {
+            return vscode.Uri.joinPath(uri, `/${filename}`);
+        }
+        if (dir[i][1] == 2) folders.push(dir[i][0]);
+    }
+
+    // Find jarname.jar in folders
+    for (let i=0; i<folders.length; i++) {
+        const folderUri = vscode.Uri.joinPath(uri, `/${folders[i]}`)
+        return findJar(folderUri, jarname);
+    }
+
+    return null;
 }
 
 export function checkAndDisplayBtns(jsimBtn: vscode.StatusBarItem, bsimBtn: vscode.StatusBarItem) {
