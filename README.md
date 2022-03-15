@@ -26,7 +26,8 @@ Currently available features:
 -   [x] Code Navigation (Folding)
 -   [x] Code Formatting (Comment Toggling, Auto-Indentation, Bracket-Matching, Bracket-Autoclosing & Bracket-Autosurrounding)
 -   [x] Snippet Completion (Auto Code Completion)
--   [x] One click to run current file in JSim/BSim (.jar files have to be in same directory as currently open file)
+-   [x] One click to run current file in JSim/BSim
+-   [x] Commands to run current file in JSim/BSim
 
 Features in the works:
 
@@ -50,7 +51,9 @@ Currently, only [Microsoft Visual Studio Code](https://code.visualstudio.com/) (
 
 ## Extension Settings
 
-This section will list out the settings contributed by this extension. Coming soon!
+The extension contributes the following settings (configuration):
+- `compstruct-vscode.statusBarButton.JSim`: Enable/Disable 'Run JSim' button in status bar
+- `compstruct-vscode.statusBarButton.BSim`: Enable/Disable 'Run BSim' button in status bar
 
 ## Known Issues
 
