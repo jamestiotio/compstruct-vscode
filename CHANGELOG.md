@@ -9,6 +9,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 -   Added commands to run JSim and BSim with currently opened file
 -   Added status bar buttons to run the above commands
 -   Added settings to allow users to disable status bar buttons
+-   Added settings to disable finding `.jar` informative message
 
 ## [0.2.7]
 
