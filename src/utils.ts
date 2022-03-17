@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { BSIM_LANGUAGE, JSIM_LANGUAGE } from './common/constants';
 
 export async function runJar(jarname: string) {
     // Find .jar files recursively in each workspace and in all directories

@@ -4,6 +4,7 @@
 // Import the module and reference it with the alias vscode in your code below
 
 import * as vscode from 'vscode';
+import { BSIM_LANGUAGE, JSIM_LANGUAGE } from './common/constants';
 import { checkAndDisplayBtns, runJar } from './utils';
 
 // this method is called when your extension is activated
@@ -31,11 +32,11 @@ export async function activate(context: vscode.ExtensionContext) {
     })
 
     context.subscriptions.push(vscode.commands.registerCommand('compstruct-vscode.jsimTerminal', () => {
-        runJar("jsim");
+        runJar(JSIM_LANGUAGE);
 	}));
 
     context.subscriptions.push(vscode.commands.registerCommand('compstruct-vscode.bsimTerminal', () => {
-        runJar("bsim");
+        runJar(BSIM_LANGUAGE);
 	}));
 }
 
