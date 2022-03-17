@@ -64,7 +64,8 @@ async function findJar(uri: vscode.Uri, jarname: string) : Promise<vscode.Uri | 
     // Find jarname.jar in folders
     for (let i=0; i<folders.length; i++) {
         const folderUri = vscode.Uri.joinPath(uri, `/${folders[i]}`)
-        return findJar(folderUri, jarname);
+        const jarUri = await findJar(folderUri, jarname);
+        if (jarUri) return jarUri;
     }
 
     return null;
