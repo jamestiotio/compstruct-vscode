@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import { BSIM_LANGUAGE, JSIM_LANGUAGE } from './common/constants';
 
 export async function runJar(jarname: string) {
+    // Inform the user that the extension is attempting to find the jar file
+    vscode.window.showInformationMessage(`Attempting to find ${jarname}.jar...`);
     // Find .jar files recursively in each workspace and in all directories
     // Run .jar with currently open file
     const workspaceFolders = vscode.workspace.workspaceFolders?.map(folder => folder.uri) || [];
@@ -13,10 +15,9 @@ export async function runJar(jarname: string) {
             foundJar = await findJarAndRun(folder, jarname);
         }
         if (!foundJar) {
-            vscode.window.showErrorMessage(`Unable to find ${jarname}.jar`)
+            vscode.window.showErrorMessage(`Unable to find ${jarname}.jar. Please ensure that the ${jarname}.jar file exists somewhere in the current workspace.`)
         }
     }
-
 }
 
 async function findJarAndRun(uri: vscode.Uri, jarname: string) {
@@ -40,6 +41,18 @@ async function findJarAndRun(uri: vscode.Uri, jarname: string) {
         if (!filepath) {
             terminal?.sendText(`java -jar ${jarUri.fsPath}`);
         } else {
+            // Get the extension of the current file
+            const extension = filepath.split('.').pop();
+            if (extension) {
+                if (
+                    (jarname === JSIM_LANGUAGE && extension !== JSIM_LANGUAGE) ||
+                    (jarname === BSIM_LANGUAGE && extension !== 'uasm')
+                ) {
+                    vscode.window.showWarningMessage(
+                        `You are running ${jarname}.jar with a source file with the .${extension} extension. Please be informed that this may not work properly.`,
+                    );
+                }
+            }
             terminal?.sendText(`java -jar ${jarUri.fsPath} ${filepath}`);
         }
 
