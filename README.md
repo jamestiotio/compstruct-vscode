@@ -54,6 +54,7 @@ Currently, only [Microsoft Visual Studio Code](https://code.visualstudio.com/) (
 The extension contributes the following settings (configuration):
 - `compstruct-vscode.statusBarButton.JSim`: Enable/Disable 'Run JSim' button in status bar
 - `compstruct-vscode.statusBarButton.BSim`: Enable/Disable 'Run BSim' button in status bar
+- `comstruct-vscode.popups.findJarNotification`: Show/Hide information message when finding `.jar` files
 
 ## Known Issues
 

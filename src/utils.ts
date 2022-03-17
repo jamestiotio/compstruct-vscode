@@ -3,7 +3,10 @@ import { BSIM_LANGUAGE, JSIM_LANGUAGE } from './common/constants';
 
 export async function runJar(jarname: string) {
     // Inform the user that the extension is attempting to find the jar file
-    vscode.window.showInformationMessage(`Attempting to find ${jarname}.jar...`);
+    const findJarInfoShow = vscode.workspace.getConfiguration("compstruct-vscode.popups").get("findJarNotification");
+    if (findJarInfoShow) {
+        vscode.window.showInformationMessage(`Attempting to find ${jarname}.jar...`);
+    }
     // Find .jar files recursively in each workspace and in all directories
     // Run .jar with currently open file
     const workspaceFolders = vscode.workspace.workspaceFolders?.map(folder => folder.uri) || [];

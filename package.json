@@ -156,6 +156,11 @@
                     "type": "boolean",
                     "default": "true",
                     "description": "Show 'Run BSim' button in status bar"
+                },
+                "compstruct-vscode.popups.findJarNotification": {
+                    "type": "boolean",
+                    "default": "true",
+                    "description": "Show information message when finding .jar files in workspace"
                 }
             }
         }
