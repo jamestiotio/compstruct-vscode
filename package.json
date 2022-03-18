@@ -2,7 +2,7 @@
     "name": "compstruct-vscode",
     "displayName": "CompStruct VSCode",
     "description": "VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)",
-    "version": "0.2.7",
+    "version": "0.2.8",
     "publisher": "jamestiotio",
     "homepage": "https://github.com/jamestiotio/compstruct-vscode",
     "author": {
@@ -133,7 +133,37 @@
                 "language": "bsim",
                 "path": "./snippets/bsim.json"
             }
-        ]
+        ],
+        "commands": [
+            {
+                "command": "compstruct-vscode.jsimTerminal",
+                "title": "Run JSim with current file"
+            },
+            {
+                "command": "compstruct-vscode.bsimTerminal",
+                "title": "Run BSim with current file"
+            }
+        ],
+        "configuration": {
+            "title": "CompStruct VSCode",
+            "properties": {
+                "compstruct-vscode.statusBarButton.JSim": {
+                    "type": "boolean",
+                    "default": "true",
+                    "description": "Show 'Run JSim' button in status bar"
+                },
+                "compstruct-vscode.statusBarButton.BSim": {
+                    "type": "boolean",
+                    "default": "true",
+                    "description": "Show 'Run BSim' button in status bar"
+                },
+                "compstruct-vscode.popups.findJarNotification": {
+                    "type": "boolean",
+                    "default": "true",
+                    "description": "Show information message when finding .jar files in workspace"
+                }
+            }
+        }
     },
     "scripts": {
         "compile": "tsc -p ./"

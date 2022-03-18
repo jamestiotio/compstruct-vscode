@@ -4,6 +4,13 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.8]
+
+-   Added commands to run JSim and BSim with currently opened file
+-   Added status bar buttons to run the above commands
+-   Added settings to allow users to disable status bar buttons
+-   Added settings to disable finding `.jar` informative message
+
 ## [0.2.7]
 
 -   Update CI workflow file to actually compile extension from TypeScript to JavaScript
