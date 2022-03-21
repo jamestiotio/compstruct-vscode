@@ -4,6 +4,9 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.9]
+-   Fix `.jar` not found for some users due to whitespace in path
+
 ## [0.2.8]
 
 -   Added commands to run JSim and BSim with currently opened file
