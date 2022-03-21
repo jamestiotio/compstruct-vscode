@@ -42,7 +42,7 @@ async function findJarAndRun(uri: vscode.Uri, jarname: string) {
         // Get filename of current file
         const filepath = vscode.window.activeTextEditor?.document.uri.fsPath;
         if (!filepath) {
-            terminal?.sendText(`java -jar ${jarUri.fsPath}`);
+            terminal?.sendText(`java -jar "${jarUri.fsPath}"`);
         } else {
             // Get the extension of the current file
             const extension = filepath.split('.').pop();
@@ -56,7 +56,7 @@ async function findJarAndRun(uri: vscode.Uri, jarname: string) {
                     );
                 }
             }
-            terminal?.sendText(`java -jar ${jarUri.fsPath} ${filepath}`);
+            terminal?.sendText(`java -jar "${jarUri.fsPath}" "${filepath}"`);
         }
 
         return true;
