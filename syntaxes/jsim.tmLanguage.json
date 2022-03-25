@@ -196,8 +196,24 @@
         "constants": {
             "patterns": [
                 {
+                    "comment": "Matches binary numbers",
                     "name": "constant.numeric.jsim",
-                    "match": "\\b[0-9]+\\.?[0-9]*"
+                    "match": "\\b0b[0-1]+(E[0-9]+)?[a-zA-Z]*"
+                },
+                {
+                    "comment": "Matches hexadecimal numbers",
+                    "name": "constant.numeric.jsim",
+                    "match": "\\b0x[0-9a-fA-F]+(E[0-9]+)?[a-zA-Z]*"
+                },
+                {
+                    "comment": "Matches octal numbers",
+                    "name": "constant.numeric.jsim",
+                    "match": "\\b0[0-7]+(E[0-9]+)?[a-zA-Z]*"
+                },
+                {
+                    "comment": "Matches decimal numbers",
+                    "name": "constant.numeric.jsim",
+                    "match": "\\b([1-9][0-9]*|0)(\\.[0-9]+)?(E[0-9]+)?[a-zA-Z]*"
                 }
             ]
         },

@@ -84,5 +84,16 @@
             ".connect ${1:node1} ${2:node2} ${3:nodes}"
         ],
         "description": "Code snippet for a connection"
+    },
+    "memory": {
+        "prefix": ["memory", "$memory"],
+        "body": [
+            "Xmem",
+            "+ ${1:oe} ${2:clk} ${3:wen} ${4:address_inputs} ${5:data_inputs}",
+            "+ ${6:oe} ${7:clk} ${8:wen} ${9:address_inputs} ${10:data_inputs}",
+            "+ ${11:oe} ${12:clk} ${13:wen} ${14:address_inputs} ${15:data_inputs}",
+            "+ \\$memory width=${16:width} nlocations=${17:nlocations}"
+        ],
+        "description": "Code snippet for a built-in multi-port memory device/subcircuit"
     }
 }
