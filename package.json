@@ -2,7 +2,7 @@
     "name": "compstruct-vscode",
     "displayName": "CompStruct VSCode",
     "description": "VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)",
-    "version": "0.2.10",
+    "version": "0.2.11",
     "publisher": "jamestiotio",
     "homepage": "https://github.com/jamestiotio/compstruct-vscode",
     "author": {
@@ -33,13 +33,13 @@
     "main": "./out/extension",
     "browser": "./out/extension",
     "devDependencies": {
-        "@types/node": "^12.19.13",
-        "@types/vscode": "^1.34.0",
-        "@typescript-eslint/eslint-plugin": "^3.0.2",
-        "@typescript-eslint/parser": "^3.0.2",
-        "eslint": "^7.1.0",
-        "typescript": "^4.1.3",
-        "vscode": "0.10.x"
+        "@types/node": "^17.0.23",
+        "@types/vscode": "^1.65.0",
+        "@typescript-eslint/eslint-plugin": "^5.16.0",
+        "@typescript-eslint/parser": "^5.16.0",
+        "@vscode/test-electron": "^2.1.3",
+        "eslint": "^8.12.0",
+        "typescript": "^4.6.3"
     },
     "categories": [
         "Programming Languages",
@@ -169,7 +169,7 @@
         "compile": "tsc -p ./"
     },
     "dependencies": {
-        "vscode-languageclient": "^6.1.3",
-        "vscode-languageserver": "^6.1.1"
+        "vscode-languageclient": "^7.0.0",
+        "vscode-languageserver": "^7.0.0"
     }
 }

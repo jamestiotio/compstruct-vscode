@@ -4,6 +4,9 @@ All notable changes to the "compstruct-vscode" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.11]
+-   Update dependency and CI Node versions to ensure security
+
 ## [0.2.10]
 -   Add proper detection for binary, hexadecimal, and octal numbers in JSim
 -   Add memory device/subcircuit module snippet in JSim
