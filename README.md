@@ -2,7 +2,7 @@
 
 VSCode Extension for Computation Structures Courseware (jsim, tmsim, bsim)
 
-<p align="center"><a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode&ssr=false#review-details"><img src="https://vsmarketplacebadge.apphb.com/rating-star/jamestiotio.compstruct-vscode.svg?style=for-the-badge&colorA=FBBD30&colorB=F2AA08"/></a> <a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode"><img src="https://vsmarketplacebadge.apphb.com/downloads-short/jamestiotio.compstruct-vscode.svg?style=for-the-badge&colorA=5DDB61&colorB=4BC74F&label=DOWNLOADS"/></a> <a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode"><img src="https://vsmarketplacebadge.apphb.com/installs-short/jamestiotio.compstruct-vscode.svg?style=for-the-badge&colorA=8a2be2&colorB=7f26cc&label=INSTALLS"/></a></p>
+<p align="center"><a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode&ssr=false#review-details"><img src="https://img.shields.io/visual-studio-marketplace/stars/jamestiotio.compstruct-vscode?style=for-the-badge&colorA=FBBD30&colorB=F2AA08"/></a> <a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode"><img src="https://img.shields.io/visual-studio-marketplace/d/jamestiotio.compstruct-vscode?style=for-the-badge&colorA=5DDB61&colorB=4BC74F&label=DOWNLOADS"/></a> <a href="https://marketplace.visualstudio.com/items?itemName=jamestiotio.compstruct-vscode"><img src="https://img.shields.io/visual-studio-marketplace/i/jamestiotio.compstruct-vscode?style=for-the-badge&colorA=8a2be2&colorB=7f26cc&label=INSTALLS"/></a></p>
 
 ## Installation
 
